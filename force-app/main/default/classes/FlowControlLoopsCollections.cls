@@ -46,7 +46,7 @@ public with sharing class FlowControlLoopsCollections {
      * @return true if the person is eligible to vote, false otherwise.
      */
     public static Boolean votingEligibility(Integer age) {
-        if ( age != null &&age >= 18) {
+        if ( age != null && age >= 18) {
             return true;
         }
         return false; 
@@ -62,10 +62,10 @@ public with sharing class FlowControlLoopsCollections {
      * @return The maximum of the two numbers, or null if either number is null.
      */
     public static Integer findMax(Integer num1, Integer num2) {
-        // Initialize largestNum as null
-        Integer largestNum = null;
-
-        return null; // Replace null with the variable you used to store the result
+        if (num1 == null || num2 == null){
+            return null;
+        }
+        return Math.max(num1, num2);
     }
 
 
